@@ -162,12 +162,6 @@ section, .site-footer {
 }
 .marquee-track span::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 @keyframes marquee { to { transform: translateX(-50%); } }
-/* Touch screens: no auto-scroll; the strip swipes sideways by hand. */
-@media (hover: none) {
-  .marquee { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
-  .marquee::-webkit-scrollbar { display: none; }
-  .marquee-track { animation: none; padding: 0 20px; }
-}
 
 /* Proof: dark band, count-up figures */
 .stat {
