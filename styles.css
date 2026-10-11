@@ -532,7 +532,7 @@ section, .site-footer {
 }
 /* Phone: a bit larger so the walker reads at a glance; it still sits above the skills strip */
 @media (max-width: 860px) {
-  .walker { zoom: 1.25; }
+  .walker { zoom: 0.65; }
 }
 
 /* Phone menu: a Menu button opens the section links as a panel under the header */
