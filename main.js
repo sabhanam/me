@@ -269,19 +269,6 @@ async function render() {
 }
 
 // Copy email: one tap to paste the address elsewhere.
-function copyEmailButton(email) {
-  const btn = el("button", { className: "btn ghost", type: "button", textContent: "Copy email" });
-  btn.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      btn.textContent = "Copied";
-    } catch {
-      btn.textContent = email;
-    }
-    setTimeout(() => (btn.textContent = "Copy email"), 2000);
-  });
-  return btn;
-}
 
 // Phone menu: toggles the nav panel and keeps aria-expanded in sync.
 function menuToggle() {

@@ -68,7 +68,6 @@ doc = f"""<!doctype html>
   <div>
     <h1>{e(p['shortName'])}</h1>
     <p class="headline">{e(p['headline'].split('·')[0].strip())}</p>
-    <p>{e(p['location'])}</p>
   </div>
   <div class="contact">
     <div><a href="mailto:{e(p['links']['email'])}">{e(p['links']['email'])}</a></div>
@@ -78,7 +77,7 @@ doc = f"""<!doctype html>
 </header>
 
 <h2>Profile</h2>
-<p>{e(p['tagline'])} {e(p['about'][0])}</p>
+<p>{e(p['about'][0])}</p>
 
 <h2>Experience</h2>
 {exp_html}

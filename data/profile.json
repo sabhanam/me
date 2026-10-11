@@ -3,11 +3,8 @@
   "shortName": "Sabhanam Sree Sai Ram",
   "headline": "Principal Software Engineer · AI, full stack, architecture and DevOps",
   "roleLine": "Principal Software Engineer",
-  "location": "Hyderabad, India",
   "pitch": "I build AI features that ship in regulated products, and the delivery system that gets them to customers safely.",
-  "tagline": "I design and build software that solves real problems, and I take it from architecture to production.",
   "photo": "assets/me.jpg",
-  "cover": "assets/cover.jpg",
   "links": {
     "email": "sabhanam06@gmail.com",
     "linkedin": "https://www.linkedin.com/in/ram-sabhanam",
@@ -287,10 +284,6 @@
       "body": "Pipelines, tests and reviews that outlive the feature, so the next person moves faster."
     }
   ],
-  "writing": {
-    "title": "Writing",
-    "note": "AI newsletters, build notes and blog posts are coming. This is where they will live."
-  },
   "education": [
     {
       "school": "Kakatiya Institute of Technology & Science",
