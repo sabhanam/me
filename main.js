@@ -448,6 +448,9 @@ const METHOD_EXTRA = [
   `<circle class="m-orbit" cx="200" cy="150" r="60"/><circle class="m-runner2" r="6"><animateMotion dur="4s" repeatCount="indefinite" path="M200 90 A60 60 0 1 1 199.9 90"/></circle>`,
 ];
 METHOD_VISUALS.forEach((v, i) => { METHOD_VISUALS[i] = v.replace("</svg>", METHOD_EXTRA[i] + "</svg>"); });
+// On phones and touch screens, drop the main-thread particle motion (SMIL) entirely.
+const LOW_POWER = window.matchMedia("(max-width: 860px), (hover: none)").matches;
+if (LOW_POWER) document.querySelectorAll(".agent-svg *").forEach((n) => { if (n.localName.toLowerCase() === "animatemotion") n.remove(); });
 
 // What each step looked like in real work, taken from the resume.
 const METHOD_EXAMPLES = [
@@ -610,6 +613,7 @@ function renderMethod(steps) {
   wrap.append(...steps.map((st, i) => {
     const visual = el("div", { className: "m-visual" });
     visual.innerHTML = METHOD_VISUALS[i];
+    if (LOW_POWER) [...visual.querySelectorAll("*")].filter((n) => n.localName.toLowerCase() === "animatemotion").forEach((a) => a.remove());
     const story = METHOD_STORY[i];
     const text = el("div", { className: "m-text" }, [
       el("span", { className: "m-num", textContent: String(i + 1).padStart(2, "0") }),

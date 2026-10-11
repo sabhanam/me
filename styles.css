@@ -1269,3 +1269,18 @@ section, .site-footer {
 @media (prefers-reduced-motion: reduce) {
   .marquee-track, .walker-figure, .walker .leg { animation: none !important; }
 }
+
+
+/* ---- Smoothness pass (low-end phones) ----
+   Only transform and opacity animate continuously. Anything that repaints an SVG every frame is switched off on phones. */
+.marquee-track, .walker, .walker-figure, .progress { will-change: transform; }
+.hero-photo { contain: layout style; }
+@media (max-width: 860px), (hover: none) {
+  .m-ticks circle, .m-loop, .m-fast, .m-beam, .m-dust, .m-pulse, .m-runner2, .m-orbit { animation: none !important; }
+  .m-doodles, .sketch { display: none; }
+  .m-card::after { display: none; }
+  .progress { will-change: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
