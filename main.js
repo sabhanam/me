@@ -767,7 +767,28 @@ function floatMarquee() {
   update();
 }
 
-render().then(() => { addSketches(); revealOnScroll(); trackNav(); floatMarquee(); menuToggle(); uiDetails(); trackMethod(); }).catch((err) => {
+// Skills strip: one requestAnimationFrame loop moves the track. No CSS animation, so nothing can stall on reload or hover.
+function runMarquee() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const track = $("marquee");
+  const SECONDS_PER_HALF = 38; // same pace as the old CSS loop
+  let half = 0;
+  let x = 0;
+  let last = 0;
+  const measure = () => { half = track.scrollWidth / 2; };
+  const frame = (now) => {
+    const dt = last ? Math.min(now - last, 50) : 0; // cap the step after a tab switch
+    last = now;
+    x = (x + (dt * half) / (SECONDS_PER_HALF * 1000)) % (half || 1);
+    track.style.transform = `translate3d(${-x}px, 0, 0)`;
+    requestAnimationFrame(frame);
+  };
+  measure();
+  window.addEventListener("resize", measure, { passive: true });
+  requestAnimationFrame(frame);
+}
+
+render().then(() => { addSketches(); revealOnScroll(); trackNav(); floatMarquee(); menuToggle(); uiDetails(); trackMethod(); runMarquee(); }).catch((err) => {
   document.body.insertAdjacentElement("afterbegin", el("p", { textContent: "Could not load profile data. Serve this folder over HTTP.", role: "alert" }));
   console.error(err);
 });
