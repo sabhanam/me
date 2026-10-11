@@ -819,10 +819,11 @@ section, .site-footer {
 .mstep {
   position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(24px, 5vw, 72px); align-items: center;
-  opacity: 0; transform: translate3d(0, 24px, 0); transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0; transform: translate3d(0, 24px, 0); transition: opacity 0.16s ease, transform 0.16s ease;
   pointer-events: none;
 }
-.mstep.active { opacity: 1; transform: none; pointer-events: auto; }
+/* Incoming step waits for the outgoing one to clear, so titles never overlap. */
+.mstep.active { opacity: 1; transform: none; pointer-events: auto; transition: opacity 0.5s ease 0.16s, transform 0.5s ease 0.16s; }
 .m-visual svg { width: 100%; max-width: 460px; height: auto; display: block; margin: 0 auto; overflow: visible; }
 .m-text h3 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; color: var(--ink); margin: 6px 0 12px; }
 .m-text p { font-size: 1.0625rem; color: var(--body); max-width: 44ch; margin: 0; }
