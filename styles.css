@@ -635,7 +635,7 @@ section, .site-footer {
 @keyframes travel { from { transform: translateX(0); } to { transform: translateX(136px); } }
 .pv-logos { display: flex; gap: 12px; align-items: center; height: 52px; }
 .pv-logos img { width: 44px; height: 44px; border-radius: 12px; opacity: 0; transform: scale(0.6); }
-.pillar.in .pv-logos img { animation: pop 0.6s cubic-bezier(0.2, 1.4, 0.4, 1) forwards; }
+.pillar.in .pv-logos img { animation: logoPop 0.6s cubic-bezier(0.2, 1.4, 0.4, 1) forwards; }
 .pillar.in .pv-logos img:nth-child(2) { animation-delay: 0.15s; }
 .pillar.in .pv-logos img:nth-child(3) { animation-delay: 0.3s; }
 @keyframes pop { to { opacity: 1; transform: scale(1); } }
@@ -1284,3 +1284,5 @@ section, .site-footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+@keyframes logoPop { to { opacity: 1; transform: scale(1); } }
