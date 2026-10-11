@@ -767,7 +767,16 @@ function floatMarquee() {
   update();
 }
 
-render().then(() => { addSketches(); revealOnScroll(); trackNav(); floatMarquee(); menuToggle(); uiDetails(); trackMethod(); }).catch((err) => {
+// Safari can leave a CSS loop paused until the next repaint, so start the strip explicitly after first paint and whenever it comes into view.
+function startMarquee() {
+  const track = document.querySelector(".marquee-track");
+  const go = () => track.getAnimations().forEach((a) => { if (a.playState !== "running") a.play(); });
+  requestAnimationFrame(() => requestAnimationFrame(go));
+  window.addEventListener("pageshow", go);
+  new IntersectionObserver((entries) => { if (entries.some((e) => e.isIntersecting)) go(); }).observe(track);
+}
+
+render().then(() => { addSketches(); revealOnScroll(); trackNav(); floatMarquee(); menuToggle(); uiDetails(); trackMethod(); startMarquee(); }).catch((err) => {
   document.body.insertAdjacentElement("afterbegin", el("p", { textContent: "Could not load profile data. Serve this folder over HTTP.", role: "alert" }));
   console.error(err);
 });
