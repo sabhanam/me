@@ -102,7 +102,7 @@ async function render() {
   $("products").append(
     ...p.projects.map((pr) => {
       const children = [
-        ...(pr.logo ? [el("img", { className: `proj-logo${pr.logoTone === "dark" ? " tile-dark" : ""}`, src: pr.logo, alt: "", width: 44, height: 44, loading: "lazy" })] : []),
+        ...(pr.logo ? [el("img", { className: "proj-logo", src: pr.logo, alt: "", width: 44, height: 44, loading: "lazy" })] : []),
         el("h3", { textContent: pr.name }),
         el("p", { className: "kind", textContent: pr.kind }),
         el("p", { textContent: pr.summary }),
@@ -170,17 +170,20 @@ async function render() {
     ]),
   );
 
-  // Atlas screenshots: same-size thumbnails that open full screen.
+  // Project screenshots: a row of same-size thumbnails per project, each opens full screen.
   const openShot = lightbox();
-  $("atlas-shots").append(
-    ...p.projects[0].images.map((img) =>
-      el("figure", {}, [
-        el("button", { className: "shot", type: "button", "aria-label": `Open full screen: ${img.alt}`, onclick: () => openShot(img.src, img.alt) }, [
-          el("img", { src: img.src, alt: "", loading: "lazy", width: 1440, height: 900 }),
+  $("project-shots").append(
+    ...p.projects.filter((pr) => pr.images).flatMap((pr) => [
+      el("h3", { className: "subhead", textContent: pr.name }),
+      el("div", { className: "shots", "aria-label": `${pr.name} screenshots` }, pr.images.map((img, i) =>
+        el("figure", {}, [
+          el("button", { className: "shot", type: "button", "aria-label": `Open full screen: ${img.alt}`, onclick: () => openShot(pr.images, i) }, [
+            el("img", { src: img.src, alt: "", loading: "lazy", width: 1440, height: 900 }),
+          ]),
+          el("figcaption", { textContent: img.caption }),
         ]),
-        el("figcaption", { textContent: img.caption }),
-      ]),
-    ),
+      )),
+    ]),
   );
 
   $("education").append(
@@ -309,7 +312,7 @@ function pillarVisual(i) {
   if (i === 1) {
     return `<svg class="pv pv-pipe" viewBox="0 0 160 40" aria-hidden="true"><line class="rail" x1="12" y1="20" x2="148" y2="20"/><circle class="pipe-node" cx="12" cy="20" r="6"/><circle class="pipe-node" cx="52" cy="20" r="6"/><circle class="pipe-node" cx="92" cy="20" r="6"/><circle class="pipe-node" cx="148" cy="20" r="6"/><circle class="travel" cx="12" cy="20" r="4"/></svg>`;
   }
-  return `<div class="pv pv-logos" aria-hidden="true"><img src="assets/projects/atlas-logo.png" alt=""><img src="assets/projects/dhequest-logo.png" alt=""><img class="tile-dark" src="assets/projects/experts-jar-logo.png" alt=""></div>`;
+  return `<div class="pv pv-logos" aria-hidden="true"><img src="assets/projects/atlas-logo.png" alt=""><img src="assets/projects/dhequest-logo.png" alt=""><img src="assets/projects/experts-jar-logo.png" alt=""></div>`;
 }
 
 // Full-screen viewer for screenshots: a native dialog, so Escape closes it.
@@ -318,9 +321,23 @@ function lightbox() {
   const img = $("lb-img");
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
   dlg.querySelector(".lb-close").addEventListener("click", () => dlg.close());
-  return (src, alt) => {
-    img.src = src;
-    img.alt = alt;
+  // Previous/next move through the opened project's screenshots and wrap around.
+  let list = [];
+  let at = 0;
+  const show = (i) => {
+    at = (i + list.length) % list.length;
+    img.src = list[at].src;
+    img.alt = list[at].alt;
+  };
+  dlg.querySelector(".lb-prev").addEventListener("click", () => show(at - 1));
+  dlg.querySelector(".lb-next").addEventListener("click", () => show(at + 1));
+  dlg.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") show(at - 1);
+    if (e.key === "ArrowRight") show(at + 1);
+  });
+  return (images, i) => {
+    list = images;
+    show(i);
     dlg.showModal();
   };
 }

@@ -124,6 +124,38 @@
       "drives": null,
       "link": null,
       "linkLabel": null,
+      "images": [
+        {
+          "src": "assets/projects/dhequest-terminal.jpg",
+          "alt": "DheQuest trading terminal with a short iron condor payoff graph over live open interest",
+          "caption": "Terminal: multi-leg payoff, probability of profit and Greeks on live prices"
+        },
+        {
+          "src": "assets/projects/dhequest-positions.jpg",
+          "alt": "DheQuest positions with live P&L next to a watchlist of NSE stocks",
+          "caption": "Positions with live P&L beside the watchlist"
+        },
+        {
+          "src": "assets/projects/dhequest-builder.jpg",
+          "alt": "DheQuest Studio strategy canvas with entry, legs and exit branches",
+          "caption": "Strategy builder: entry, legs and exits as a visual flow"
+        },
+        {
+          "src": "assets/projects/dhequest-option-chain.jpg",
+          "alt": "DheQuest option chain for Bank Nifty with OI, IV and delta per strike",
+          "caption": "Option chain: live OI, IV and Greeks across strikes"
+        },
+        {
+          "src": "assets/projects/dhequest-charts.jpg",
+          "alt": "DheQuest daily Nifty chart with support/resistance zones and swing levels",
+          "caption": "Charts with S/R zones, swings and a candle inspector"
+        },
+        {
+          "src": "assets/projects/dhequest-brokers.jpg",
+          "alt": "DheQuest broker settings listing eight Indian brokers",
+          "caption": "Eight brokers, each session tracked on its own"
+        }
+      ],
       "logo": "assets/projects/dhequest-logo.png"
     },
     {
@@ -138,8 +170,7 @@
       "drives": null,
       "link": null,
       "linkLabel": null,
-      "logo": "assets/projects/experts-jar-logo.png",
-      "logoTone": "dark"
+      "logo": "assets/projects/experts-jar-logo.png"
     }
   ],
   "experience": [
