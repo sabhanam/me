@@ -1,0 +1,385 @@
+{
+  "name": "Sree Sai Ram Sabhanam",
+  "shortName": "Sabhanam Sree Sai Ram",
+  "headline": "Principal Software Engineer · AI, full stack, architecture and DevOps",
+  "roleLine": "Principal Software Engineer",
+  "pitch": "I build AI features that ship in regulated products, and the delivery system that gets them to customers safely.",
+  "photo": "assets/me.jpg",
+  "links": {
+    "email": "sabhanam06@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ram-sabhanam",
+    "github": "https://github.com/sabhanam",
+    "resume": "resume/Sabhanam-Sree-Sai-Ram-Resume.pdf"
+  },
+  "proof": [
+    {
+      "value": "11+",
+      "headline": "Years shipping software",
+      "context": "From automation engineer in 2015 to principal engineer today.",
+      "segments": 11
+    }
+  ],
+  "pillars": [
+    {
+      "title": "AI that survives compliance review",
+      "body": "I lead the AI side of an enterprise financial reporting product, where a mistake costs real money. I own solution design, technical direction and quality sign-off for every release, and I still build the work hands-on."
+    },
+    {
+      "title": "Delivery you can trust",
+      "body": "I run Azure DevOps end to end: YAML build and release pipelines, release gates, branch policies, self-hosted agents and multi-environment deployments. The result is validation that takes days, not weeks."
+    },
+    {
+      "title": "Builds products end to end",
+      "body": "Outside work I've built a trading platform, an AI agent orchestration platform and an e-learning platform, taking each from architecture and APIs through to deployment."
+    }
+  ],
+  "philosophy": [
+    {
+      "step": "Make the requirements less dumb",
+      "note": "Question every requirement before building it."
+    },
+    {
+      "step": "Delete the part or process",
+      "note": "The best code is the code that never gets written."
+    },
+    {
+      "step": "Simplify or optimise the design",
+      "note": "Fewer moving parts, fewer ways to fail."
+    },
+    {
+      "step": "Accelerate cycle time",
+      "note": "Shorter feedback loops ship better software."
+    },
+    {
+      "step": "Automate",
+      "note": "Automate what survives the first four steps."
+    }
+  ],
+  "about": [
+    "I'm a developer, solution designer and architect. I take features from architecture and API design through implementation, pipelines and production. My depth in test automation makes me a stronger full stack engineer, not a narrower one.",
+    "I started in 2015 building automation frameworks, moved into C# development, then into Azure cloud engineering. Today I'm most useful where architecture decisions, pipelines and product code meet.",
+    "I lead by reviewing code, setting engineering standards and mentoring the people I work with through implementation, not by handing down tickets."
+  ],
+  "ai": {
+    "title": "AI engineering, built in practice",
+    "intro": "I work with LLM agents as a daily tool and as a product surface. That means orchestration, protocols and the guardrails that make them safe to use on real codebases.",
+    "points": [
+      "LLM agent orchestration, Model Context Protocol (MCP) servers, and workflows around agent CLIs such as Claude Code and GitHub Copilot CLI.",
+      "Locally hosted models through Ollama, applied to product AI initiatives and to my own agent orchestration platform.",
+      "Built a platform that runs, reviews and steers multiple AI coding agents across projects, on Windows, macOS and Linux."
+    ]
+  },
+  "projects": [
+    {
+      "name": "AI agent orchestration platform",
+      "kind": "Personal project",
+      "summary": "A workbench for running, reviewing and steering multiple AI coding agents across software projects.",
+      "stack": [
+        "TypeScript",
+        "Fastify",
+        "PostgreSQL",
+        "React",
+        "MCP server",
+        "SSE streaming",
+        "Docker Compose",
+        "Playwright"
+      ],
+      "drives": "Drives Claude Code, GitHub Copilot CLI and local Ollama models.",
+      "link": null,
+      "linkLabel": null
+    },
+    {
+      "name": "Trading platform",
+      "kind": "Personal project",
+      "summary": "A platform for automating trading strategies, back-testing them against historical data and executing through broker APIs.",
+      "stack": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redis",
+        "Apache ActiveMQ",
+        "WebSockets",
+        "Docker"
+      ],
+      "drives": null,
+      "link": null,
+      "linkLabel": null
+    },
+    {
+      "name": "E-learning platform",
+      "kind": "Personal project",
+      "summary": "A platform where students and professionals switching technologies gain new skills through hands-on practice.",
+      "stack": [
+        "React",
+        "Node.js",
+        "Express"
+      ],
+      "drives": null,
+      "link": null,
+      "linkLabel": null
+    }
+  ],
+  "experience": [
+    {
+      "role": "Principal Software Engineer",
+      "company": "insightsoftware",
+      "place": "Hyderabad",
+      "period": "Jun 2023 – Present",
+      "bullets": [
+        "Own solution design, architecture and technical direction for the AI-assisted capabilities of an enterprise financial reporting product, and build them hands-on.",
+        "Set engineering standards for a regulated platform and own quality sign-off for each release.",
+        "Design integration points across web and Windows desktop applications, and build the automation layer (Selenium, Playwright, WinApp Driver) that verifies the stack end to end.",
+        "Own Azure DevOps end to end: YAML pipelines, release gates, branch policies, self-hosted agents and multi-environment deployments.",
+        "Designed and built the Visual Comparison solution for a report generation product that could not compare reports across versions. Product efficiency rose 70%, release validation dropped from 6 weeks to 7 days, and customer defects in report output fell 80%."
+      ]
+    },
+    {
+      "role": "Lead",
+      "company": "Cigniti Technologies",
+      "place": "Hyderabad",
+      "period": "Nov 2022 – May 2023",
+      "bullets": [
+        "Led an offshore engineering team of 8 on a mobile client platform for Android and iOS, owning delivery planning, framework improvements, automation coverage and PR reviews across bi-weekly releases.",
+        "Created and maintained Azure DevOps pipelines and the cloud device lab (BrowserStack) the team released through."
+      ]
+    },
+    {
+      "role": "Senior Software Development Engineer",
+      "company": "Microsoft IGD (Affluent Global Services)",
+      "place": "Hyderabad",
+      "period": "Nov 2020 – Nov 2022",
+      "bullets": [
+        "Senior engineer on AvNext, a web platform for car infotainment and service management, working across services, cloud components and UI.",
+        "Re-engineered the platform's custom test framework, refactoring base methods and tightening abstractions so the team could extend it.",
+        "Architected and operated Azure components across Storage, Blob, Queues, Function Apps and Cosmos DB, with the pipelines that released them and observability through Kusto, Grafana and Elasticsearch.",
+        "Validated internal API contracts with Postman and profiled service throughput with JMeter."
+      ]
+    },
+    {
+      "role": "Software Development Engineer in Test",
+      "company": "Dell Technologies (Magna Info Tech)",
+      "place": "Hyderabad",
+      "period": "Jul 2019 – Nov 2020",
+      "bullets": [
+        "This is where my shift into development began. I contributed application code in C# and helped shape the technical design of features, alongside owning web and API automation.",
+        "Brought unit testing and validation on dev machines into the team, which measurably improved code quality. Built a Test Data Management tool to support it."
+      ]
+    },
+    {
+      "role": "Automation Engineer",
+      "company": "Scotiabank (Tech Mahindra)",
+      "place": "Hyderabad",
+      "period": "Dec 2015 – Jul 2019",
+      "bullets": [
+        "Started my career here. Built and owned automation frameworks across web and mobile applications, using VBScript and Java.",
+        "Orchestrated plug-and-play frameworks such as Quantum across languages and OS versions. Built an automated Test Data Management tool and ran automation training for the QA team."
+      ]
+    },
+    {
+      "role": "Jr. Software Engineer",
+      "company": "Thredz Information Technology",
+      "place": "Hyderabad",
+      "period": "Jul 2014 – Jun 2015",
+      "bullets": [
+        "Built two VB.NET and SQL Server products, designing the interactive screens and their supporting APIs, and assisted with deployment to test and production servers."
+      ]
+    }
+  ],
+  "skills": {
+    "AI & agents": [
+      "LLM agent orchestration",
+      "MCP servers",
+      "Claude Code",
+      "GitHub Copilot CLI",
+      "Ollama"
+    ],
+    "Languages": [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "C#",
+      "Java",
+      "PowerShell",
+      "VB.NET"
+    ],
+    "Web & services": [
+      "React",
+      "Node.js",
+      "Express",
+      "Fastify",
+      "REST",
+      "WebSockets / SSE",
+      "Azure Functions"
+    ],
+    "Data": [
+      "PostgreSQL",
+      "MongoDB",
+      "Cosmos DB",
+      "Redis",
+      "Elasticsearch",
+      "ClickHouse",
+      "Kusto"
+    ],
+    "Cloud & DevOps": [
+      "Azure",
+      "AWS",
+      "Docker",
+      "Azure DevOps",
+      "Jenkins",
+      "YAML pipelines",
+      "Self-hosted agents"
+    ],
+    "Quality & automation": [
+      "Selenium",
+      "Playwright",
+      "Appium",
+      "WinApp Driver",
+      "Cucumber BDD",
+      "JMeter",
+      "Postman"
+    ]
+  },
+  "now": {
+    "title": "Right now",
+    "items": [
+      "Leading AI capabilities for an enterprise financial reporting product.",
+      "Building my own agent orchestration platform: multi-agent workflows, MCP servers and local models.",
+      "Mentoring engineers through code review and hands-on implementation."
+    ]
+  },
+  "howIWork": [
+    {
+      "title": "Trace the real flow first",
+      "body": "I follow a feature from the user's click to the database before I change anything."
+    },
+    {
+      "title": "Smallest change that proves it",
+      "body": "I ship the smallest version that answers the question, then measure it."
+    },
+    {
+      "title": "Leave standards behind",
+      "body": "Pipelines, tests and reviews that outlive the feature, so the next person moves faster."
+    }
+  ],
+  "education": [
+    {
+      "school": "Kakatiya Institute of Technology & Science",
+      "place": "Warangal, India",
+      "year": "2014",
+      "logo": "assets/kits-logo.jpg",
+      "link": "https://www.kitsw.ac.in/"
+    }
+  ],
+  "solutions": [
+    {
+      "title": "Visual Comparison solution",
+      "body": "Compares report versions across releases and produces one consolidated difference report.",
+      "metrics": [
+        {
+          "value": "7 days",
+          "label": "release validation, down from 6 weeks",
+          "w": 0.17
+        },
+        {
+          "value": "−80%",
+          "label": "customer defects in report output",
+          "w": 0.8
+        },
+        {
+          "value": "+70%",
+          "label": "product efficiency after the release",
+          "w": 0.7
+        }
+      ]
+    },
+    {
+      "title": "Parallel UI automation platform",
+      "body": "Ran QTP/UFT scripts in parallel across all major browsers, with CI/CD integration and central reporting. It removed the UFT license cost and cut test management effort.",
+      "points": [
+        "Runs QTP/UFT scripts in parallel across all major browsers",
+        "Plugs into CI/CD, so tests run on every build without manual steps",
+        "Central reporting: one place to see results from every run",
+        "Removed the UFT license cost and cut test management effort"
+      ]
+    },
+    {
+      "title": "Test data preparation tool (TDM)",
+      "body": "An automated Test Data Management tool that keeps test data healthy, so teams spend their time testing rather than fixing data. I later implemented one on another team, where it supported unit testing practices that cut post-deployment defects.",
+      "points": [
+        "Keeps test data healthy, so runs fail for real bugs, not stale data",
+        "Prepares the data a test needs before the run starts",
+        "Removes hours of manual data fixing from each test cycle",
+        "Supported the unit testing practices that cut post-deployment defects"
+      ]
+    },
+    {
+      "title": "Facial and pattern recognition API",
+      "body": "A web service API for facial and pattern recognition, plus XPath handling for HTML DOMs that the standard tools could not read.",
+      "points": [
+        "A web service any application can call over HTTP",
+        "Recognises faces and patterns in one shared service",
+        "Handles XPath for HTML DOMs that standard tools could not read",
+        "Reusable across projects, so each team does not rebuild it"
+      ]
+    }
+  ],
+  "technical": {
+    "title": "How it's built",
+    "lede": "The systems behind the highlights, layer by layer.",
+    "caseStudy": {
+      "title": "Case study: the Visual Comparison pipeline",
+      "problem": "Our report product combines Word and Excel files from many data sources. After years of feature growth there was no way to compare a report across versions, so every release needed weeks of manual checking.",
+      "steps": [
+        "Render each report version to a comparable output with a Node.js and Puppeteer pipeline.",
+        "Compare the rendered outputs with C# libraries, so the diff logic lives beside the product's own code.",
+        "Drive the full run with Selenium, so the comparison covers the same paths a user takes.",
+        "Consolidate every difference into one HTML report that reviewers can scan in minutes."
+      ],
+      "stack": [
+        "Node.js",
+        "Puppeteer",
+        "C#",
+        "Selenium",
+        "HTML reporting"
+      ],
+      "result": "Release validation dropped from 6 weeks to 7 days, and customer defects in report output fell 80%."
+    },
+    "architectures": [
+      {
+        "name": "AI agent orchestration platform",
+        "summary": "An AI agent orchestration platform, built as a TypeScript monorepo.",
+        "layers": [
+          "React, MUI and TanStack Query UI on Vite",
+          "Fastify API with Kysely over PostgreSQL",
+          "MCP server for agent integration",
+          "SSE streaming of live agent output",
+          "Claude Code, GitHub Copilot CLI and Ollama as agents",
+          "Docker Compose, with Playwright end-to-end tests"
+        ]
+      },
+      {
+        "name": "Trading platform",
+        "summary": "A trading platform for strategy back-testing and broker execution.",
+        "layers": [
+          "React and Node.js Express front and API",
+          "Apache ActiveMQ for message flow between services",
+          "Redis cache and WebSocket market-data streaming",
+          "MongoDB for strategies and history",
+          "Function Apps and webhooks, with broker REST APIs",
+          "Containerised end to end"
+        ]
+      }
+    ],
+    "delivery": {
+      "title": "Delivery and quality",
+      "points": [
+        "Azure DevOps YAML build and release pipelines, with release gates and approvals",
+        "Branch policies and PR validation, with self-hosted agent pools and artifact feeds",
+        "Multi-environment deployments, with Docker-based releases",
+        "Test automation across UI, mobile, desktop, API, database and performance",
+        "Selenium Grid, Appium, WinApp Driver, Playwright, Cucumber BDD, JMeter and Postman"
+      ]
+    }
+  }
+}
